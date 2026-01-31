@@ -1,0 +1,475 @@
+%-------------------------
+% Resume in Latex
+% Author : Harsh Mittal, 2018eeb1150@iitrpr.ac.in
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.6cm, top=0.5cm, right=0.6cm, bottom=0.5cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeCP}[1]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}
+    \end{tabular*}
+    \vspace{-1mm}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+
+\newcommand{\resumeAchieve}[2]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\textbf{:}\hspace{0.3mm}#2 
+    \end{tabular*}
+    \vspace{-1.4mm}
+}
+
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Prasanna Nadrajan R} % Your Name
+\newcommand{\roll}{241801207} % Your Roll No.
+\newcommand{\phone}{8667687297} % Your Phone Number
+\newcommand{\emaila}{prasannanadrajan@gmail.com} %Email 1
+\newcommand{\emailb}{prasaznat@gmail.com} %Email 2
+\newcommand{\github}{https://github.com/Prasanna-Nadrajan} %Github
+\newcommand{\website}{https://prasazx.tech/} %Website
+\newcommand{\linkedin}{https://www.linkedin.com/in/prasannanadrajan}
+\newcommand{\college}{Rajalakshmi Engineering College , Chennai}
+%linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{\dimexpr\linewidth\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {B.Tech - Artificial Intelligence and Data Science} &  \href{mailto:\emaila}{\emaila}\\
+  $|$ \href{\website}{My Portfolio} &  \href{\github}{GitHub} \\
+  {\college} &  \href{\linkedin}{LinkedIn}\\
+   
+\end{tabularx}
+}
+
+\vspace{-1mm}
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\section{\textbf{Education}}
+\vspace{2.5mm}
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  Bachelor of Technology & {\college} & 8.87/10 (Current) & 2024-Present\\
+  
+  %\hline
+  %Minor in CSE & Indian Institute of Technology, Ropar & 8.52 %(Till 6th Sem) & 2018-2022\\
+ 
+  \hline
+  Senior Secondary & The Hindu Senior Secondary School & 89.60\% & 2024 \\
+  \hline
+  Secondary & The Hindu Senior Secondary School & 82.67\% & 2022 \\
+  \hline
+\end{tabularx}}
+\vspace{0mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Work Experience}}
+  \resumeSubHeadingListStart
+\vspace{2.5mm}
+    \resumeSubheading
+      {Evo Astra Ventures Pvt.Ltd}{Remote}
+      {Data Science Intern}{Dec 2025 - Jan 2026}
+      \vspace{1.5mm}
+      \resumeItemListStart
+    \item {Analyzed customer datasets using SQL and Python, generating insights that improved campaign targeting by 25\%.}
+    \item {Developed automated ETL pipelines consolidating multi-source data, reducing manual reporting time by 40\%.}
+    \item {Created Power BI dashboards to present KPIs and support data-driven decision making for stakeholders.}
+    
+    \resumeItemListEnd
+    \resumeSubheading
+      {Analyse Research Quant (ARQ)}{Chennai, Tamil Nadu}
+      {Data Analyst Associate}{Sep 2024 - Present}
+      \vspace{1.5mm}
+      \resumeItemListStart
+    \item {Led hackathons applying Python, R, and ML to solve real problems}
+    \item {Built predictive models and dashboards, improving insights and decision-making processes}
+    \item {Organized workshops simplifying complex data science topics for peer learning}
+    
+    \resumeItemListEnd
+    
+    % \vspace{-1mm}
+    % \resumeSubheading
+    %   {Company Name}{Location}
+    %   {Position}{June 2021 - July 2021}
+    %   \resumeItemListStart
+    % \item {About work}
+    % \item {About Work}
+    
+    
+    % \item {More work done } .
+  \resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+% \section{\textbf{Technical Skills}}
+% \vspace{1mm}
+% \resumeSubHeadingListStart
+% \resumeCP
+%     {Competitive Programming:}
+% \resumeItemListStart
+%     \begin{enumerate}
+%         \item {\textbf{CodeChef:} \textbf{5*Star} rated coder with \textbf{2003}(Max) rating points. \href{https://www.codechef.com/users/shivam_4498}{[handle \textbf{shivam\_4498}]}}
+%         \item {\textbf{CodeForces:} \textbf{Expert} with the rating of \textbf{1726}(Max). \href{https://codeforces.com/profile/shivu_8944}{[handle \textbf{shivu\_8944}]}}
+%     \end{enumerate}
+% \resumeItemListEnd
+% \resumeSubHeadingListEnd
+%     \vspace{-10mm}
+%  \resumeHeadingSkillStart
+% %   \resumeSubItem{Competitive Programming} {}
+% %   \resumeSubItem{\hspace{1mm} 1). CodeChef} 
+% %   { \textbf{5*Star} rated coder with \textbf{2003}(Max) rating points. \href{https://www.codechef.com/users/shivam_4498}{[handle \textbf{shivam\_4498}]}}
+   
+   
+% %   \resumeSubItem{\hspace{1mm} 2). CodeForces} 
+% %   {\textbf{ Expert} with the rating of \textbf{1726}(Max). \href{https://codeforces.com/profile/shivu_8944}{[handle \textbf{shivu\_8944}]} }
+  
+    
+ 
+%   \resumeSubItem{Programming Languages} % Category
+%     { C/C++, Python, SQL}
+    
+%     %\vspace{-0.5mm}
+    
+%  \resumeSubItem{Software/Tools/libraries} % Category
+%     {Visual Studio, Git, Jupyter, Google Colab} % Skills
+% \resumeHeadingSkillEnd
+    
+%     \vspace{-2mm}
+
+%     %\vspace{-0.5mm}
+    
+% %  \resumeSubItem{Skills 3} % Category
+% %     {blah, blah } % Skills
+
+% %-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\vspace{2.5mm}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {AMBULANCE DETECTING TRAFFIC SYSTEM} %Project Name
+      {Self Guided Project} %Project Name, Location Name
+      {Sep 2024} %Event Dates
+      {\href{https://github.com/Prasanna-Nadrajan/Ambulance_detecting_traffic_system}{\textbf{Github}}} %Website
+      \resumeItemListStart
+        \item {Developed a Smart Traffic Management System using Computer Vision to detect emergency vehicles in real-time through visual and audio cues.}
+        \item {Implemented virtual environment with automated traffic light control}
+    \resumeItemListEnd
+    
+     \vspace{-1mm}
+    \resumeProject
+      {eDNA-VAI-PIPELINE} %Project Name
+      {Self Guided Project} %Project Name, Location Name
+      {Sep 2024} %Event Dates
+      {\href{https://github.com/Prasanna-Nadrajan/eDNA-VAI-Pipeline}{\textbf{Github}}} %Website
+      \resumeItemListStart
+        \item {Engineered an AI pipeline for deep-sea biodiversity assessment using Variational Autoencoder (VAE) to cluster and analyze environmental DNA sequences.}
+        \item {Enabled computational discovery and classification of novel taxa and biodiversity patterns from oceanic samples.}
+    \resumeItemListEnd
+    
+     \vspace{-1mm}
+     
+      \resumeProject
+      {OTHER PROJECTS} %Project Name
+      {Self Guided Projects} %Project Name, Location Name
+      {Jun 2024 - Present} %Event Dates
+      {}
+      \resumeItemListStart
+      % \vspace{1.5mm}
+        \item {\textbf{AI-powered Code Review for ML Pipelines, } Automated code review tool for ML pipelines analyzing best practices and performance bottlenecks. \href{https://github.com/Prasanna-Nadrajan/AI-powered-code-review-for-ML-pipelines}{\textbf{[Github]}}}
+        \vspace{0.5mm}
+        \item {\textbf{Loan Eligibility Detector, } Streamlit application predicting loan eligibility using financial and personal data. \href{https://github.com/Prasanna-Nadrajan/Loan-Eligibility-Detector}{\textbf{[Github]}}}
+        \vspace{0.5mm}
+        \item {\textbf{Billing Management System, } CGI-based system with payment processing, customer management, and history tracking. \href{https://github.com/Prasanna-Nadrajan/Billing_Management_System_Using_C}{\textbf{[Github]}}}
+    \resumeItemListEnd
+    
+     
+    
+   
+      
+  \resumeSubHeadingListEnd
+\vspace{-7mm}
+
+% \section{\textbf{Technical Skills}}
+% \vspace{2.5mm}
+%  \resumeHeadingSkillStart
+%   \resumeSubItem{Competitive Programming} % Category
+  
+    
+ 
+%   \resumeSubItem{Programming Languages} % Category
+%     { C/C++, Python, SQL}
+    
+%     %\vspace{-0.5mm}
+    
+%  \resumeSubItem{Software/Tools/libraries} % Category
+%     {Visual Studio, Git, Jupyter, Google Colab} % Skills
+    
+%     %\vspace{-0.5mm}
+    
+% %  \resumeSubItem{Skills 3} % Category
+% %     {blah, blah } % Skills
+    
+%     %\vspace{-0.5mm}
+    
+ 
+%  \resumeHeadingSkillEnd
+
+% \vspace{-1mm}
+\section{\textbf{Technical Skills}}
+\vspace{1mm}
+\resumeSubHeadingListStart
+\resumeCP
+    {Competitive Programming:}
+\resumeItemListStart
+    \begin{enumerate}
+        \item {\textbf{HackerRank:} \textbf{5*Star} rated coder in Python, C ,Java , SQL and Problem Solving. \href{https://www.hackerrank.com/profile/prasannanadraj07}{\textbf{[prasannanadraj07]}}}
+        \item {\textbf{LeetCode:} \textbf{Expert} at problem solving and DSA and solved over 100 problems. \href{https://leetcode.com/u/Prasanna_Nadrajan}{ \textbf{[Prasanna\_Nadrajan]}}}
+        \vspace{2mm}
+    \end{enumerate}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+    \vspace{-10mm}
+ \resumeHeadingSkillStart
+%   \resumeSubItem{Competitive Programming} {}
+%   \resumeSubItem{\hspace{1mm} 1). CodeChef} 
+%   { \textbf{5*Star} rated coder with \textbf{2003}(Max) rating points. \href{https://www.codechef.com/users/shivam_4498}{[handle \textbf{shivam\_4498}]}}
+   
+   
+%   \resumeSubItem{\hspace{1mm} 2). CodeForces} 
+%   {\textbf{ Expert} with the rating of \textbf{1726}(Max). \href{https://codeforces.com/profile/shivu_8944}{[handle \textbf{shivu\_8944}]} }
+  
+    
+ \vspace{1.5mm}
+ \vspace{1.5mm}
+  \resumeSubItem{Programming Languages} % Category
+    {Python, C, Java}
+  \resumeSubItem{DataBases}% Category
+    {SQL, MongoDB}
+    %\vspace{-0.5mm}
+  \resumeSubItem{Software/Tools} % Category
+    {Visual Studio, Git, GitHub, Jupyter, Google Colab} % Skills
+  \resumeSubItem{Libraries}
+    {Pandas, Numpy, Dask, Seaborn, Scipy, OpenCV, Flask}
+  \resumeSubItem{Cloud}
+    {Google Cloud Platform}
+  \resumeSubItem{Soft Skills}
+    {Communication, Leadership, Teamwork, Creativity, Accountability}
+\resumeHeadingSkillEnd
+    
+    \vspace{-2mm}
+
+    %\vspace{-0.5mm}
+    
+%  \resumeSubItem{Skills 3} % Category
+%     {blah, blah } % Skills
+
+%-----------PROJECTS-----------------
+\section{\textbf{Key courses taken}}
+\vspace{2.5mm}
+\resumeHeadingSkillStart
+ \resumeSubItem{ComputerScience Courses} % Category
+    { Data Structure \& Algorithm , Object Oriented Programming , DBMS, Java}
+    %\vspace{-0.5mm}
+\resumeSubItem{DataScience Courses}
+ { Machine Learning , Data Analytics}
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \resumeHeadingSkillEnd
+
+\vspace{-1.5mm}
+
+
+% \section{\textbf{Positions of Responsibility}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Secretary} % Position
+%     {XYZ Club, IIT Ropar} %Club,Event
+%     {Apr. 2018 - Apr. 2019} %Tenure Period
+% \resumePOR{Secretary} % Position
+%     {XYZ Club, IIT Ropar} %Club,Event
+%     {Apr. 2018 - Apr. 2019} %Tenure Period
+% \resumeSubHeadingListEnd
+% \vspace{-4mm}
+
+
+\section{\textbf{Miscellaneous}}
+\vspace{2mm}
+\resumeSubHeadingListStart
+% \resumePOR{CodeChef} % Award
+%     { \textbf{5*Star} rated coder with \textbf{2003}(Max) rating points. \href{https://www.codechef.com/users/shivam_4498}{[handle \textbf{shivam\_4498}]}} % Event
+%     {2021} %Event Year
+% \vspace{-0.1mm}
+% \resumePOR{CodeForces} % Award
+%     {\textbf{ Expert} with the rating of \textbf{1726}(Max). \href{https://codeforces.com/profile/shivu_8944}{[handle \textbf{shivu\_8944}]} } % Event
+%     {2021} %Event Year
+% \vspace{-0.1mm}
+    \resumePOR{Board Member in Ethics Club REC} % Award
+        {Promote ethical practices and awareness within the college community} % Event
+        {2025} %Event Year
+    \vspace{-0.1mm}
+    \resumePOR
+        {Completed 100\+ days of Coding Challenge}            
+        {currently progressing through a 200-day DSA roadmap.}
+        {2025}
+    \resumePOR{CodeSapiens Git-in-Kadhai} % Award
+        { Secured \textbf{3rd position}, among many participants.} % Event
+        {2025} %Event Year
+    
+    \vspace{-0.1mm}
+
+% \vspace{-1.2mm}
+\resumeSubHeadingListEnd
+% \vspace{-2mm}
+% \hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+
+%-------------------------------------------
+\end{document}
