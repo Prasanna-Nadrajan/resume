@@ -10,7 +10,7 @@
 
 % --- UNIVERSAL PREAMBLE BLOCK (Adapted for pdfLaTeX Compilation) ---
 % Using your specific geometry settings
-\usepackage[a4paper, left=0.5cm, top=0.5cm, right=0.5cm, bottom=1cm]{geometry}
+\usepackage[a4paper, left=0.8cm, top=0.8cm, right=0.8cm, bottom=0.8cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern} % Latin Modern fonts - clean and professional
@@ -69,8 +69,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
 
 %-------------------------
 % Custom commands
@@ -85,7 +85,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0.3mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
 
@@ -112,21 +112,21 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
+\vspace{1mm}\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
     \end{tabular*}
-    \vspace{-2.4mm}
+    \vspace{0mm}
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
+\vspace{1mm}\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
+        \textit{\footnotesize{#2}} & \footnotesize{#4}
     \end{tabular*}
-    \vspace{-2.4mm}
+    \vspace{0mm}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -183,9 +183,7 @@
 
 %-----------PROFESSIONAL SUMMARY-----------------
 \section{\textbf{Professional Summary}}
-\vspace{1mm}
-\small{Aspiring AI and Data Science professional with hands-on experience in Machine Learning, Computer Vision, and Data Analytics. Proficient in Python, SQL, and cloud technologies with a proven track record of building impactful projects. Strong problem-solving skills with 100+ coding challenges completed and active participation in hackathons and technical workshops.}
-\vspace{1mm}
+\small{Aspiring AI and Data Science undergraduate with hands-on experience in Machine Learning, Computer Vision, and Data Analytics. Proficient in Python, SQL, and cloud technologies with a proven track record of building impactful projects. Strong problem-solving skills with 200+ coding challenges completed and active participation in hackathons and technical workshops. Passionate about solving real-world problems through data-driven and intelligent systems.  }
 
 %-----------EDUCATION-----------------
 % \section{Education}
@@ -198,11 +196,10 @@
 %       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
 %   \resumeSubHeadingListEnd\vspace{-3mm}
 \section{\textbf{Education}}
-\vspace{2.5mm}
-\setlength{\tabcolsep}{6pt} % Default value: 6pt
+\setlength{\tabcolsep}{4pt} % Default value: 6pt
 % \renewcommand{\arraystretch}{1.1} % Default value: 1
 \small{\begin{tabularx}
-{\dimexpr\textwidth-2mm\relax}{|c|C|c|c|}
+{\textwidth}{|c|C|c|c|}
   \hline
   \textbf{Degree } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
   \hline
@@ -222,8 +219,6 @@
 %-----------EXPERIENCE-----------------
 \section{\textbf{Work Experience}}
   \resumeSubHeadingListStart
-\vspace{2.5mm}
-
     \resumeSubheading
       {Analyse Research Quant (ARQ)}{Chennai, Tamil Nadu}
       {Data Analyst Associate}{Sep 2025 - Present}
@@ -234,7 +229,6 @@
     \item {Organized \textbf{technical workshops} for \textbf{100+ peers}, simplifying complex data science and ML concepts.}
     
     \resumeItemListEnd
-    
     \resumeSubheading
       {Evo Astra Ventures Private Limited}{Remote}
       {Data Science Intern}{Dec 2025 - Jan 2026}
@@ -255,6 +249,7 @@
     \item {Applied GIS tools including QGIS and ArcGIS to map and interpret spatial patterns with \textbf{95\% accuracy}.}
     
     \resumeItemListEnd
+    
     
     % \vspace{-1mm}
     % \resumeSubheading
@@ -311,11 +306,10 @@
 
 % %-----------PROJECTS-----------------
 \section{\textbf{Projects}}
-\vspace{2.5mm}
 \resumeSubHeadingListStart
 
     \resumeProject
-      {AI-DRIVEN LAND USE AND LAND COVER CLASSIFICATION (ML)} %Project Name
+      {AI-Driven Land Use and Land Cover Classification (ML)} %Project Name
       {Intern Project} %Project Name, Location Name
       {Jan 2026} %Event Dates
       {\href{https://github.com/Prasanna-Nadrajan/AI-Driven-Land-Use-and-Land-Cover-Classification-}{\textbf{Github}}} %Website
@@ -326,7 +320,7 @@
     
      \vspace{-1mm}
     \resumeProject
-      {AMBULANCE DETECTING TRAFFIC SYSTEM (ML)} %Project Name
+      {Real-Time Emergency Vehicle Prioritization System | ML} %Project Name
       {Self Guided Project} %Project Name, Location Name
       {Sep 2025} %Event Dates
       {\href{https://github.com/Prasanna-Nadrajan/Ambulance_detecting_traffic_system}{\textbf{Github}}} %Website
@@ -337,7 +331,7 @@
     
      \vspace{-1mm}
     \resumeProject
-      {ISLAND RESCUE MISSION (Data)} %Project Name
+      {ML-Driven Triage and Geospatial Analysis for Crisis Simulation | Data} %Project Name
       {DataXscape Hackathon Project} %Project Name, Location Name
       {Jan 2026} %Event Dates
       {\href{https://github.com/Prasanna-Nadrajan/Island-Rescue-Mission}{\textbf{Github}}} %Website
@@ -348,7 +342,7 @@
     
      \vspace{-1mm}
     \resumeProject
-      {eDNA-VAI-PIPELINE (ML)} %Project Name
+      {Unsupervised Learning Pipeline for Deep-Sea Taxa Classification | Machine Learning} %Project Name
       {Smart India Hackathon Project} %Project Name, Location Name
       {Sep 2025} %Event Dates
       {\href{https://github.com/Prasanna-Nadrajan/eDNA-VAI-Pipeline}{\textbf{Github}} | \href{https://edna-biodiversity-pipeline-production.up.railway.app/}{\textbf{Live}}} %Website
@@ -358,7 +352,7 @@
     \resumeItemListEnd
     \vspace{-1mm}
     \resumeProject
-      {PROFESSIONAL PORTFOLIO (SDP)} %Project Name
+      {Professional Portfolio | SDP} %Project Name
       {Self Guided Project} %Project Name, Location Name
       {Oct 2025} %Event Dates
       {\href{https://github.com/Prasanna-Nadrajan/Portfolio-Prasaz}{\textbf{Github}} | \href{https://prasazx.tech/}{\textbf{Live}}}
@@ -385,11 +379,11 @@
         \item {\textbf{Loan Eligibility Detector, } Streamlit application predicting loan eligibility using financial and personal data using Random Forest (Machine Learning model). \href{https://github.com/Prasanna-Nadrajan/Loan-Eligibility-Detector}{\textbf{[Github]}}}
         \vspace{5mm}
         % \vspace{0.5mm}
-        \item {\textbf{Retail Management System, } Full-stack RMS with FastAPI backend, MySQL database, and vanilla JS frontend featuring POS interface, inventory management, and real-time reporting. \href{https://github.com/Prasanna-Nadrajan/Retail-Management-System}{\textbf{[Github]}}}
-        \vspace{5mm}
-        \item {\textbf{Zenith - Event Management System, } Full-stack event management application built with Java 17, Spring Boot backend, MySQL database, and HTML5/CSS3/JavaScript frontend. \href{https://github.com/Prasanna-Nadrajan/Zenith}{\textbf{[Github]}}}
-        \vspace{5mm}
-        \item {\textbf{Billing Management System, } CGI-based system with payment processing, customer management, and history tracking. \href{https://github.com/Prasanna-Nadrajan/Billing_Management_System_Using_C}{\textbf{[Github]}}}
+        %\item {\textbf{Retail Management System, } Full-stack RMS with FastAPI backend, MySQL database, and vanilla JS frontend featuring POS interface, inventory management, and real-time reporting. \href{https://github.com/Prasanna-Nadrajan/Retail-Management-System}{\textbf{[Github]}}}
+        %\vspace{5mm}
+        %\item {\textbf{Zenith - Event Management System, } Full-stack event management application built with Java 17, Spring Boot backend, MySQL database, and HTML5/CSS3/JavaScript frontend. \href{https://github.com/Prasanna-Nadrajan/Zenith}{\textbf{[Github]}}}
+        %\vspace{5mm}
+        %\item {\textbf{Billing Management System, } CGI-based system with payment processing, customer management, and history tracking. \href{https://github.com/Prasanna-Nadrajan/Billing_Management_System_Using_C}{\textbf{[Github]}}}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-7mm}
@@ -429,11 +423,11 @@
     \begin{enumerate}
         \item {\textbf{HackerRank:} \textbf{5-Star} rated coder in Python, C, Java, SQL, and Problem Solving. \href{https://www.hackerrank.com/profile/prasannanadraj07}{\textbf{[prasannanadraj07]}}}
         \item {\textbf{LeetCode:} Solved \textbf{200+ problems} focusing on Data Structures and Algorithms. \href{https://leetcode.com/u/Prasanna_Nadrajan}{\textbf{[Prasanna\_Nadrajan]}}}
-        \vspace{2mm}
+        % \vspace{2mm}
     \end{enumerate}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
-    \vspace{-10mm}
+    % \vspace{-4mm}
  \resumeHeadingSkillStart
 %   \resumeSubItem{Competitive Programming} {}
 %   \resumeSubItem{\hspace{1mm} 1). CodeChef} 
@@ -444,30 +438,25 @@
 %   {\textbf{ Expert} with the rating of \textbf{1726}(Max). \href{https://codeforces.com/profile/shivu_8944}{[handle \textbf{shivu\_8944}]} }
   
     
- \vspace{1.5mm}
- \vspace{1.5mm}
+ % \vspace{1mm}
   \resumeSubItem{Programming Languages} % Category
-    {Python, C, Java, R, JavaScript}
-  \resumeSubItem{Machine Learning}
-    {Supervised/Unsupervised Learning, Neural Networks, Deep Learning, NLP, Computer Vision, Model Evaluation}
+    {Python, C, Java, R}
   \resumeSubItem{DataBases}% Category
     {MySQL, MongoDB}
     %\vspace{-0.5mm}
-  \resumeSubItem{Data Science Libraries}
+  \resumeSubItem{Data Science / Machine Learning Libraries}
     {Pandas, NumPy, Scikit-learn, TensorFlow, Keras, OpenCV, SciPy}
   \resumeSubItem{Software/Tools} % Category
     {Visual Studio Code, Git, GitHub, Jupyter Notebook, Google Colab, Docker} % Skills
   \resumeSubItem{Data Visualization and BI tools}
     {Matplotlib, Seaborn, Plotly, Power BI}
-  \resumeSubItem{Web Development (MERN Stack)}
-    {MongoDB, Express.js, React, Node.js}
   \resumeSubItem{Cloud Platforms}
-    {GCP (Basic)}
+    {GCP}
   \resumeSubItem{Soft Skills}
     {Communication, Leadership, Teamwork, Creativity, Accountability}
 \resumeHeadingSkillEnd
     
-    \vspace{-2mm}
+    % \vspace{-2mm}
 
     %\vspace{-0.5mm}
     
@@ -476,7 +465,6 @@
 
 %-----------PROJECTS-----------------
 \section{\textbf{Key courses taken}}
-\vspace{2.5mm}
 \resumeHeadingSkillStart
  \resumeSubItem{ComputerScience Courses} % Category
     { Data Structure \& Algorithm , Object Oriented Programming , DBMS, Java}
@@ -503,7 +491,6 @@
 
 
 \section{\textbf{Miscellaneous}}
-\vspace{2mm}
 \resumeSubHeadingListStart
 % \resumePOR{CodeChef} % Award
 %     { \textbf{5*Star} rated coder with \textbf{2003}(Max) rating points. \href{https://www.codechef.com/users/shivam_4498}{[handle \textbf{shivam\_4498}]}} % Event
@@ -535,8 +522,7 @@
 
 %-----------LANGUAGES-----------------
 \section{\textbf{Languages}}
-\vspace{1mm}
-\small{\textbf{English} (Fluent) $\bullet$ \textbf{Tamil} (Native) $\bullet$ \textbf{Japanese} (Communicative)}
+\small{\textbf{English} (Fluent) $\bullet$ \textbf{Tamil} (Native)
 \vspace{2mm}
 
 % \hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
